@@ -6,7 +6,7 @@ from tkinter import * #import all
  
 root = tk.Tk() #root is object of class Tk
 root.title('Spell Checker')	#title of the app
-root.configure(bg = 'red') #background window color
+root.configure(bg = 'black') #background window color
  
 def words(text): 
     return re.findall(r'\w+', text.lower()) #converting all texts to lower cases
@@ -53,7 +53,7 @@ name_entrybox.grid(row=0,column=2) #positioning of box
 # name_label.config(font=("Enter your query", 30)) 
 name_entrybox.focus() 
  
-name_label=ttk.Label(root,text='Enter your query',foreground='yellow',background='red') #default query asking statement
+name_label=ttk.Label(root,text='Enter your query',foreground='red',background='blue') #default query asking statement
 name_label.grid(row=1,column=2) #positioning
 name_label.config(font=("Enter your query", 25)) #for the font size
  
@@ -78,7 +78,7 @@ def action():
     textx.clear()
  
     global result_label
-    result_label=tk.Label(root,text=s,foreground='yellow',background='red')#output statement
+    result_label=tk.Label(root,text=s,foreground='red',background='blue')#output statement
     result_label.grid(row=6,columnspan=3) #positioning result statement 
     result_label.configure(font=(s,25))
     submit_button['state']=DISABLED
